@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,700;1,700&display=swap");
+
+body {
+  margin-left: 2%;
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(230, 220, 165);
+}
+
+main {
+  text-align: justify;
+  margin-left: 15%;
+  margin-right: 30%;
+}
+
+header {
+  margin-left: 15%;
+  margin-right: 30%;
+}
+
+nav {
+  border: 1px solid rgb(190, 190, 190);
+  background: rgba(240, 240, 240, 0.5);
+  border-radius: 25px;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  width: 215px;
+}
+
+nav li {
+  margin-top: 12px;
+}
+
+aside {
+  background: rgba(240, 240, 240, 0.5);
+  border: 1px solid rgb(190, 190, 190);
+  border-radius: 25px;
+  padding: 15px;
+  width: 15%;
+  float: right;
+  height: 337vh;
+}
+
+footer {
+  margin-left: 15%;
+  margin-right: 30%;
+  border-top: 1px solid rgb(190, 190, 190);
+}
+
+.ad-block {
+  margin: 10px 10px 40px 10px;
+  text-align: center;
+}
+
+.picture > img {
+  width: 70%;
+  border-radius: 20px;
+  display: block;
+  margin: auto;
+}
+
+.ad-block img {
+  width: 100%;
+}
+
+a:visited {
+  color: rgba(96, 100, 100, 0.816);
+}
+
+a:hover {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+a:active {
+  color: rgb(5, 5, 5);
+}
+
+a {
+  color: rgba(49, 53, 53, 0.816);
+}
+
+h3 + p {
+  font-style: italic;
+}
+
+h1 {
+  font-family: "PT+Sans" sans-serif;
+  font-style: italic;
+}
