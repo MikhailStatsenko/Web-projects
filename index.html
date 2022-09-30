@@ -6,7 +6,6 @@
 		<title>Красивые места Монголии</title>
 		<link rel="icon" type="image/png" href="https://f-gl.ru/images/flag/Mongolia/FlagMongolia1940-1992.png">
     <link rel="stylesheet" href="style.css">
-    </style>
 	</head>
 	<body>
 		<header>
@@ -21,17 +20,6 @@
         </ul>
       </nav>
 		</header>
-    <nav>
-      <div class = "fast-travel">
-        <ul>
-          <li><a href = "index.html#Title1">Город Улан-Батор</a></li>
-          <li><a href = "index.html#Title2">Памятник Чингисхану</a></li>
-          <li><a href = "index.html#Title3">Пустыня Гоби</a></li>
-          <li><a href = "index.html#Title4">Города монголии</a></li>
-          <li><a href = "index.html#Title5">Заключение</a></li>
-        </ul>
-    </div>
-    </nav>
     <aside>
       <div class="ad-block">
         <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%B0" target = "_blank">
@@ -52,8 +40,84 @@
         </a>
       </div>
     </aside>
+
+    <div class="survey">
+      <b>Хотите переехать в Монголию? Заполните эту анкету!</b><br><br>
+      <form action="" method="get">
+        <label for="city-selection">В каких странах вы уже бывали?<br></label>
+        <select id="city-selection" multiple size="5" required>
+          <option value="Australia">Австралия</option>
+          <option value="Austria">Австрия</option>
+          <option value="Belarus">Белоруссия</option>
+          <option value="Brazil">Бразилия</option>
+          <option value="Venezuela">Венесуэла</option>
+          <option value="Germany">Германия</option>
+          <option value="Canada">Канада</option>
+          <option value="Oman">Оман</option>
+          <option value="Estonia">Эстония</option>
+          <option value="Japan">Япония</option>
+        </select>
+        <p>
+          <label for="name">
+            Ваше имя: <br>
+            <input type="text" name="name" id="name" placeholder="Иванов Иван Иванович" pattern="[А-Яа-яЁё]{2,} [А-Яа-яЁё]{2,} [А-Яа-яЁё]{2,}" required>
+          </label>
+        </p>
+        <p>
+          <label >Номер телефона:
+            <input type="tel" name="telephone" placeholder="+7(999)111-22-33">
+          </label>
+        </p>   
+        <p>
+          <label>Электронная почта:
+            <input type="email" name="e-mail" placeholder="mymail@mail.ru" required>
+          </label>
+        </p>
+        <p>
+          <label>Пароль для регистрации на сайте:
+            <input type="password" name="passwd" required>
+          </label>
+        </p>
+        <p>
+          <label>Дата и время рождения:
+            <input type="datetime-local" name="b-day" min="1900-01-01T00:00" max="2004-10-06T00:00">
+          </label>
+        </p>
+        <p>
+          <p>Пол:</p>
+          <lable><input type="radio" name="gender" id="male" checked>М</lable>
+          <lable><input type="radio" name="gender" id="female">Ж</lable>
+        </p>
+        <p>
+          <label>Копия паспорта:
+            <input type="file" name="docs">
+          </label>
+        </p>
+        <p>
+          <label>Даю согласие на обработку персональных данных:
+            <input type="checkbox" name="accept-data-processing" required>
+          </label>
+        </p>
+        <p>
+          <input type="submit" name="submit">
+        </p>
+
+      </form>
+    </div>
+
 		<main>
       <h1>Монголия</h1>
+      <nav>
+        <div class = "fast-travel">
+          <ul>
+            <li><a href = "index.html#Title1">Город Улан-Батор</a></li>
+            <li><a href = "index.html#Title2">Памятник Чингисхану</a></li>
+            <li><a href = "index.html#Title3">Пустыня Гоби</a></li>
+            <li><a href = "index.html#Title4">Города монголии</a></li>
+            <li><a href = "index.html#Title5">Заключение</a></li>
+          </ul>
+      </div>
+      </nav>
       <article>
         <h2>Что посмотерть в Монглолии? Интересные места, фотографии и описание!</h2>
         <selection>
@@ -88,6 +152,14 @@
           <p><b>Пустыня Гоби</b> находится на севере страны, <i>самая большая пустыня в Азии</i>. Практически не заселена, на территории встречаются кочующие племена. Растительность скудная, но есть уникальные представители фауны. Здесь находится крупнейшее кладбище динозавров. Археологи провели раскопки в бассейне Немегэт в северо-западной части пустыни Гоби, где было обнаружено много останков доисторических животных: протоцератопсов, тарбозавров и зауролофов. Наиболее известна находка «Дерущихся динозавров», сцепившихся и погибших при обвале велоцираптора и протоцератопса.
           <a href= "https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D0%B1%D0%B8"><sub>(Больше информации)</sub></a></p>
         </selection>
+        <section>
+          <h3>Видео о путешествии в монголию</h3>
+          <iframe srcdoc='
+            <video src="myVid.mp4" controls width=100% height=56.25% preload=auto poster="https://glagol38.ru/public/images/upload/image7386295676.jpg">
+            </video>
+          '>
+          </iframe>
+        </section>
 
         <selection>
           <h3 id = "Title4">Города монголии</h3>
@@ -139,6 +211,24 @@
       </article>
 	  </main>
 
+    <div class="comment">
+      <form action="" method="get"></form>
+        <fieldset>
+          <legend>Оставьте свой отзыв о статье:</legend>
+          <textarea placeholder="Текст комментария" cols="90" rows= "15" maxlength="720" minlength="10" required></textarea>
+          <div class="comment-nav">
+            <ul>
+              <li>
+                <button name="send-comment">Отправить комментарий</button>
+              </li>
+              <li>
+                <button name="reset-comment" type="reset">Удалить текст комментария</button>
+              </li>
+            </ul>
+          </div>
+      </form>
+    </div>
+
     <footer>
       Консульский отдел Посольства Монголии в России:
       <a href=" tel:+8-499-241-15-48">+8-499-241-15-48</a>
@@ -151,3 +241,4 @@
     </footer>
 	</body>
 </html>
+

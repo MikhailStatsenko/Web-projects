@@ -9,13 +9,13 @@ body {
 
 main {
   text-align: justify;
-  margin-left: 15%;
-  margin-right: 30%;
+  margin-left: 20%;
+  margin-right: 25%;
 }
 
 header {
-  margin-left: 15%;
-  margin-right: 30%;
+  margin-left: 20%;
+  margin-right: 25%;
 }
 
 .fast-travel li {
@@ -31,12 +31,11 @@ aside {
   position: fixed;
   right: 10px;
   top: 15%;
-  height: 75vh;
 }
 
 footer {
-  margin-left: 15%;
-  margin-right: 30%;
+  margin-left: 20%;
+  margin-right: 25%;
   position: relative;
   top: 20px;
   padding-top: 10px;
@@ -78,13 +77,10 @@ h1 {
 }
 
 .fast-travel {
-  position: absolute;
-  left: 8px;
-  top: 15%;
   border: 1px solid rgb(190, 190, 190);
   background: rgba(240, 240, 240, 0.5);
   border-radius: 25px;
-  width: 14%;
+  width: 200px;
 }
 
 .fast-travel ul {
@@ -134,4 +130,115 @@ header {
   display: block;
   margin: auto;
   margin-bottom: 2rem;
+}
+
+.survey {
+  font-size: smaller;
+  position: fixed;
+  top: 15%;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  padding: 1%;
+  left: 10px;
+  width: 17%;
+  border-radius: 25px;
+  float: left;
+  border: 1px solid rgb(190, 190, 190);
+  background: rgba(240, 240, 240, 0.5);
+}
+
+.comment {
+  width: 55%;
+  margin: 3% 25% 10px 20%;
+}
+
+.comment textarea {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 90%;
+  padding: 2%;
+  resize: none;
+  display: block;
+  border-radius: 7px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-style: oblique;
+}
+
+input:not([type="radio"], [type="file"], [type="checkbox"]) {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 95%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding-left: 4px;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+}
+
+input:focus {
+  outline: 0;
+  background-color: rgba(220, 220, 220, 0.652);
+}
+
+::selection {
+  background-color: rgb(229, 227, 227);
+}
+
+fieldset {
+  border-radius: 25px;
+  border: 1px solid rgb(190, 190, 190);
+}
+
+.comment button {
+  height: 3rem;
+  width: 48.3%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  font-family: "Roboto", sans-serif;
+}
+
+select {
+  width: 98%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding-left: 4px;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+button:active,
+input[type="submit"]:active {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.comment textarea:focus,
+select:focus {
+  outline: 0;
+}
+
+.comment-nav li {
+  display: inline;
+}
+
+.comment-nav ul {
+  margin-top: 0.5%;
+  padding-left: 3%;
+  list-style: none;
+}
+
+iframe {
+  border: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 480px;
+  height: 285px;
 }
