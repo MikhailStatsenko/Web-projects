@@ -8,18 +8,26 @@
     <link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<header>
-      <nav id = "navbar">
-        <ul>
-          <li><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Mongolia.svg" alt="Флаг монголии" width = 14%></li>
-          <li><a>Домой</a></li>
-          <li><a>Новости</a></li>
-          <li><a>Фотографии</a></li>
-          <li><a>Источники</a></li>
-          <li><a>О нас</a></li>
+    <header>
+      <nav class="menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+        <a href="index.html" class="logo">
+          <img
+          src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Mongolia.svg"
+          alt="Флаг монголии"
+          width="14%"
+        /></a>
+        <ul class="menu__box">
+          <li><a class="menu__item" href="index.html">Домой</a></li>
+          <li><a class="menu__item">Новости</a></li>
+          <li><a class="menu__item" href="gallery.html">Фото</a></li>
+          <li><a class="menu__item">О нас</a></li>
         </ul>
       </nav>
-		</header>
+    </header>
     <aside>
       <div class="ad-block">
         <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%B0" target = "_blank">
@@ -101,7 +109,6 @@
         <p>
           <input type="submit" name="submit">
         </p>
-
       </form>
     </div>
 
@@ -152,14 +159,14 @@
           <p><b>Пустыня Гоби</b> находится на севере страны, <i>самая большая пустыня в Азии</i>. Практически не заселена, на территории встречаются кочующие племена. Растительность скудная, но есть уникальные представители фауны. Здесь находится крупнейшее кладбище динозавров. Археологи провели раскопки в бассейне Немегэт в северо-западной части пустыни Гоби, где было обнаружено много останков доисторических животных: протоцератопсов, тарбозавров и зауролофов. Наиболее известна находка «Дерущихся динозавров», сцепившихся и погибших при обвале велоцираптора и протоцератопса.
           <a href= "https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D0%B1%D0%B8"><sub>(Больше информации)</sub></a></p>
         </selection>
-        <section>
+        <!-- <section>
           <h3>Видео о путешествии в монголию</h3>
           <iframe srcdoc='
-            <video src="myVid.mp4" controls width=100% height=56.25% preload=auto poster="https://glagol38.ru/public/images/upload/image7386295676.jpg">
+            <video src="myVid.mp4" controls width=100% preload=auto poster="https://glagol38.ru/public/images/upload/image7386295676.jpg">
             </video>
           '>
           </iframe>
-        </section>
+        </section> -->
 
         <selection>
           <h3 id = "Title4">Города монголии</h3>
