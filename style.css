@@ -5,6 +5,7 @@ body {
   margin-left: 2%;
   font-family: "Roboto", sans-serif;
   background-color: rgb(230, 220, 165);
+  /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9maTWxby8pygNe2xozRNX80y6EjRM8FkPNBVEnVtm&s); */
 }
 
 main {
@@ -391,7 +392,6 @@ header {
 }
 
 .notifications-content {
-  overflow-y: scroll;
   transition: color 0.2s ease-out;
   padding-left: 8%;
   padding-right: 8%;
@@ -408,6 +408,7 @@ header {
 }
 
 .notification:hover .notifications-content {
+  overflow-y: scroll;
   transition: color 1.5s ease-in 0.3s;
   color: rgb(0, 0, 0, 1);
 }
@@ -481,11 +482,10 @@ button.top-button {
 }
 
 .good-button {
-  border: 1px solid black;
   background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background 0.3s ease-in-out;
+  transition: background-position 0.3s ease-in-out;
 }
 
 button.good-button {
@@ -537,7 +537,7 @@ button.ok-button:hover {
 
 .ok-button:hover::before {
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1.05);
 }
 
 .bad-button {
@@ -565,6 +565,547 @@ button.bad-button {
   to {
     background-position: 400%;
   }
+}
+
+.glassmorphism-cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.card {
+  position: relative;
+  width: 28%;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  z-index: 1;
+}
+
+.card::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+}
+
+.card::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+  filter: blur(15px);
+}
+
+.card:hover:before,
+.card:hover:after {
+  transform: skewX(0deg) scaleX(1.4) scaleY(1.1);
+}
+
+.card:before,
+.card:after {
+  background: linear-gradient(315deg, #ffffff, #383636);
+}
+
+.orange.card:before,
+.orange.card:after {
+  background: linear-gradient(315deg, #ffbc00, #ff0058);
+}
+
+.blue.card:before,
+.blue.card:after {
+  background: linear-gradient(315deg, #287cfb, #ff007b);
+}
+
+.green.card:before,
+.green.card:after {
+  background: linear-gradient(315deg, #2eff3c, #02dad6);
+}
+
+.card span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.card span::before {
+  transition: top 1.5s ease, left 1.5s ease, opacity 0.5s;
+  content: "";
+  position: absolute;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  top: -40px;
+  left: 40px;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.card:hover span::before {
+  top: -5px;
+  left: 58px;
+  opacity: 1;
+}
+
+.card span::after {
+  transition: bottom 1.5s ease, right 1.5s ease, opacity 0.5s;
+  content: "";
+  position: absolute;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  bottom: -40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.card:hover span::after {
+  bottom: -5px;
+  right: 58px;
+  opacity: 1;
+}
+
+.card .card-content {
+  position: relative;
+  width: 80%;
+  height: 70%;
+  padding-left: 9%;
+  padding-right: 9%;
+  padding-bottom: 20%;
+  padding-top: 5%;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  z-index: 1;
+  transform: 0.5s;
+  color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  text-align: left;
+  overflow: hidden;
+}
+
+.card-content p {
+  font-size: small;
+}
+
+.card .card-content h4 {
+  font-size: 15px;
+  color: #fff;
+}
+
+.social-networks {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  justify-content: space-between;
+}
+
+.network {
+  border: 2px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.3) inset;
+  z-index: 10;
+}
+
+.network::before {
+  content: "";
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  position: absolute;
+  color: #fff;
+  background-image: linear-gradient(
+    90deg,
+    #ffbb00cd,
+    #ff0059c7 30%,
+    transparent 28%
+  );
+  background-position: 100%;
+  background-size: 400%;
+  transform: rotate(90deg);
+  transition: background 0.7s ease;
+}
+
+.network:hover::before {
+  background-position: 0;
+}
+
+.network img {
+  width: 25px;
+  z-index: 5;
+}
+
+.blurring-cards {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4%;
+}
+
+.blurring-cards .blur-card {
+  position: relative;
+  width: 28%;
+  height: 340px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  padding-top: 40px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+
+.blurring-cards:hover .blur-card {
+  filter: blur(20px);
+  transform: scale(0.9);
+  opacity: 0.5;
+}
+
+.blurring-cards .blur-card:hover {
+  filter: blur(0px);
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.blurring-cards .blur-card .circle {
+  position: relative;
+  top: -20%;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  clip-path: circle(180px at center -5px);
+  text-align: left;
+}
+
+.blurring-cards .blur-card .circle h2 {
+  color: #fff;
+  font-size: 15px;
+  padding: 35px 25px;
+}
+
+.blurring-cards .blur-card .content {
+  position: absolute;
+  bottom: 10px;
+  padding-top: 25px;
+  padding-left: 20px;
+  padding-right: 10px;
+  text-align: left;
+}
+
+.blurring-cards .blur-card .content p {
+  color: #666;
+}
+
+.blurring-cards .blur-card .content a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  border-radius: 40px;
+  margin-left: 13%;
+  text-decoration: none;
+}
+
+.blurring-cards .blur-card:nth-child(1) .circle,
+.blurring-cards .blur-card:nth-child(1) .content a {
+  background: #ffaf00;
+}
+
+.blurring-cards .blur-card:nth-child(2) .circle,
+.blurring-cards .blur-card:nth-child(2) .content a {
+  background: #da2268;
+}
+
+.blurring-cards .blur-card:nth-child(3) .circle,
+.blurring-cards .blur-card:nth-child(3) .content a {
+  background: #bb02ff;
+}
+
+.flashing-cards {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4%;
+}
+
+.flashing-cards .flashing-card {
+  position: relative;
+  width: 28%;
+  height: 340px;
+  background: linear-gradient(90deg, rgb(49, 30, 75) 50%, rgb(13, 0, 42) 50%);
+  overflow: hidden;
+  padding-top: 40px;
+  border: 3px solid black;
+  transition: 0.5s;
+}
+
+.flashing-cards:hover .flashing-card {
+  filter: grayscale(30%) contrast(70%);
+  transform: scale(0.98);
+}
+
+.flashing-cards .flashing-card:hover {
+  filter: blur(0px);
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+.flashing-cards .flashing-card h2 {
+  top: 50px;
+  right: 20px;
+  font-size: 55px;
+  color: rgb(27, 0, 81);
+  z-index: 1;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.flashing-cards .flashing-card:hover h2 {
+  top: -35px;
+  color: rgba(17, 46, 132, 0.998);
+}
+
+.flashing-cards .flashing-card h3 {
+  font-size: 15px;
+}
+
+.flashing-cards .flashing-card p {
+  font-style: normal;
+  font-size: 14px;
+}
+
+.flashing-card .flashing-content {
+  position: absolute;
+  top: 60px;
+  text-align: left;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  z-index: 15;
+}
+
+.flashing-cards .flashing-card .flashing-content a {
+  position: relative;
+  font-size: 12px;
+  display: inline-block;
+  padding: 8px 10px;
+  background: white;
+  margin-left: 26%;
+  color: black;
+  letter-spacing: 0.7px;
+  text-decoration: none;
+}
+
+.flashing-card svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none;
+  z-index: 300;
+  stroke: rgb(87, 129, 255);
+  stroke-dasharray: 450 1440;
+  stroke-dashoffset: 450;
+  transition: 1s ease-in-out;
+}
+
+.flashing-card:hover svg {
+  stroke-dashoffset: -1440;
+}
+
+.login-box {
+  margin-top: 13%;
+  margin-bottom: 13%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.login-box .floating-square {
+  position: absolute;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  animation: animate 10s linear infinite;
+  animation-delay: calc(-1s * var(--i));
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+}
+
+.login-box .floating-square:nth-child(1) {
+  top: -15%;
+  right: 150px;
+  width: 100px;
+  height: 100px;
+}
+
+.login-box .floating-square:nth-child(2) {
+  top: 30%;
+  left: 80px;
+  width: 120px;
+  height: 120px;
+  z-index: 2;
+}
+
+.login-box .floating-square:nth-child(3) {
+  bottom: 50px;
+  right: 17%;
+  width: 80px;
+  height: 80px;
+  z-index: 2;
+}
+
+.login-box .floating-square:nth-child(4) {
+  bottom: -10%;
+  left: 40%;
+  width: 50px;
+  height: 50px;
+}
+
+.login-box .floating-square:nth-child(5) {
+  top: -15%;
+  left: 40%;
+  width: 60px;
+  height: 60px;
+}
+
+.login-container {
+  position: relative;
+  width: 400px;
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+}
+
+.form h2 {
+  position: relative;
+  color: rgba(56, 59, 59, 0.816);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+.form h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 12rem;
+  height: 4px;
+  background: rgba(56, 59, 59, 0.816);
+}
+
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form .input-box input {
+  width: 90%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form .input-box input::placeholder {
+  color: rgb(167, 167, 167);
+}
+
+.form .input-box input[type="submit"] {
+  background: rgb(249, 240, 225);
+  color: #666;
+  width: 7rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.forget {
+  margin-top: 5px;
+  color: rgba(96, 100, 100, 0.816);
+}
+
+.forget a {
+  text-decoration: none;
+  color: rgba(56, 59, 59, 0.816);
+  font-weight: 600;
 }
 
 /* 
@@ -774,7 +1315,7 @@ button.bad-button {
     border: none;
     border-top: 1px solid rgb(190, 190, 190);
     background-color: rgba(234, 229, 202);
-    z-index: 1;
+    z-index: 25;
     display: flex;
     align-items: stretch;
     justify-content: space-between;
@@ -926,5 +1467,96 @@ button.bad-button {
 
   .rate-gallery button {
     width: 120%;
+  }
+
+  .card {
+    width: 90%;
+    height: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    z-index: 1;
+  }
+
+  .card::before {
+    top: -5%;
+    left: 25%;
+    width: 40%;
+    height: 110%;
+  }
+
+  .card::after {
+    top: -5%;
+    left: 25%;
+    width: 40%;
+    height: 110%;
+  }
+
+  .glassmorphism-cards {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+  }
+
+  .blurring-cards {
+    flex-flow: column wrap;
+  }
+
+  .blurring-cards .blur-card {
+    width: 90%;
+    margin-top: 8%;
+  }
+
+  .flashing-cards {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+  }
+
+  .flashing-cards .flashing-card {
+    width: 59.5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+  }
+
+  .login-box {
+    margin-top: 45%;
+    margin-bottom: 22%;
+  }
+
+  .login-box .floating-square:nth-child(1) {
+    top: -9%;
+    right: 0;
+  }
+
+  .login-box .floating-square:nth-child(2) {
+    top: 30%;
+    left: -10px;
+    width: 55px;
+    height: 55px;
+  }
+
+  .login-box .floating-square:nth-child(3) {
+    bottom: -30px;
+    right: 0;
+  }
+
+  .login-box .floating-square:nth-child(4) {
+    bottom: -12%;
+    left: 40%;
+  }
+
+  .login-box .floating-square:nth-child(5) {
+    top: -8%;
+    left: 40%;
+  }
+
+  .login-container {
+    width: 300px;
+    min-height: 300px;
+  }
+
+  .form {
+    text-align: left;
   }
 }
