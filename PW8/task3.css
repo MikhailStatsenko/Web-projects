@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300;1,400&display=swap");
+
+body {
+  height: 97vh;
+  background: rgb(17, 17, 20);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.form-box {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 65rem;
+  height: 30rem;
+  background: black;
+  padding: 30px;
+  padding-top: 0;
+}
+
+.form-box h2 {
+  position: relative;
+  font-weight: 500;
+  font-size: 2.4rem;
+  color: white;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.form {
+  display: grid;
+  grid-template-areas:
+    "name  surname"
+    "mail phone"
+    "msg msg"
+    "submit .";
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1.5rem;
+  column-gap: 5%;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  height: 70%;
+}
+
+.inputbox {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.inputbox input {
+  position: relative;
+  width: 95%;
+  top: -10px;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  color: transparent;
+  box-shadow: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.5s;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+
+.inputbox span {
+  position: absolute;
+  left: 0;
+  top: -10px;
+  color: #8f8f8f;
+  transition: 0.5s;
+  font-size: 1.2rem;
+}
+
+.inputbox input:focus ~ span {
+  color: #45f3ff;
+  transform: translateX(-8px) translateY(-8px);
+}
+
+.inputbox input:focus {
+  top: 15px;
+  color: black;
+}
+
+.inputbox i {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #45f3ff;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.inputbox input:focus ~ i {
+  height: 44px;
+}
+
+.submit-bnt input {
+  transition: 0.05s;
+  background: #45f3ff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  width: 10rem;
+  height: 3rem;
+  bottom: 200px;
+}
+
+.submit-bnt input:active {
+  background: #69dee6;
+  box-shadow: 3px 3px #54a0a6 inset;
+}
+
+.name {
+  grid-area: name;
+}
+
+.surname {
+  grid-area: surname;
+}
+
+.mail {
+  grid-area: mail;
+}
+
+.phone {
+  grid-area: phone;
+}
+
+.msg {
+  grid-area: msg;
+}
+
+.submit-bnt {
+  justify-self: left;
+  grid-area: submit;
+}
+
+@media (min-width: 713px) and (max-width: 1000px) {
+  .form-box {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 40rem;
+    height: 35rem;
+    background: black;
+    padding: 30px;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 712px) {
+  .form {
+    display: grid;
+    grid-template-areas:
+      "name"
+      "surname"
+      "mail"
+      "phone"
+      "msg"
+      "submit";
+    grid-template-rows: repeat(1fr, 6);
+    grid-template-columns: 1fr;
+  }
+
+  .form-box {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 15rem;
+    height: 36rem;
+    background: black;
+    padding: 30px;
+    padding-top: 0;
+  }
+
+  .inputbox span {
+    font-size: 1.1rem;
+  }
+}

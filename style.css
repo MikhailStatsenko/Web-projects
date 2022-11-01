@@ -608,7 +608,7 @@ button.bad-button {
   border-radius: 10px;
   transform: skewX(15deg);
   transition: 0.5s;
-  filter: blur(15px);
+  /* filter: blur(15px); */
 }
 
 .card:hover:before,
@@ -708,6 +708,7 @@ button.bad-button {
   align-items: flex-start;
   text-align: left;
   overflow: hidden;
+  backdrop-filter: blur(15px);
 }
 
 .card-content p {
@@ -1111,7 +1112,7 @@ button.bad-button {
 /* 
 Для больших экранов 
 */
-@media (min-width: 769px) {
+@media (min-width: 1001px) {
   nav {
     display: block;
     width: 100%;
@@ -1160,9 +1161,9 @@ button.bad-button {
 }
 
 /* 
-Для маленьких экранов 
+Для планшетов экранов 
 */
-@media (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 1000px) {
   .menu__btn {
     display: flex;
     align-items: center;
@@ -1559,4 +1560,10 @@ button.bad-button {
   .form {
     text-align: left;
   }
+}
+
+/* 
+Для мобильных
+*/
+@media (min-width: 320px) and (max-width: 768px) {
 }

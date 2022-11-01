@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300;1,400&display=swap");
+
+body {
+  margin: 0;
+  background: rgb(72, 72, 148);
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  height: 100vh;
+}
+
+footer {
+  background: rgb(50, 50, 149);
+}
+
+.footer-content-block {
+  color: rgb(214, 214, 214);
+  display: grid;
+  margin-left: 8rem;
+  margin-right: 7rem;
+  grid-template-areas: "about-us quick-links shop contact-us";
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(1fr, 4);
+  column-gap: 4rem;
+  margin-bottom: 2rem;
+}
+
+.about-us {
+  max-width: 500px;
+  grid-area: about-us;
+}
+
+.quick-links {
+  grid-area: quick-links;
+}
+
+.shop {
+  grid-area: shop;
+}
+
+.contact-us {
+  grid-area: contact-us;
+}
+
+.footer-content h3 {
+  position: relative;
+  font-size: 1.4rem;
+}
+
+.footer-content h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 3rem;
+  height: 3px;
+  background: rgb(214, 214, 214);
+}
+
+footer::after {
+  display: block;
+  text-align: center;
+  content: "Copyright © 2022 Student MIREA. All Rights Reserved";
+  background: rgb(37, 37, 108);
+  color: rgb(214, 214, 214);
+  padding: 5px;
+}
+
+.info-block {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.info-block img {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  top: 0;
+  display: inline;
+}
+
+.footer-content a {
+  transition: 0.2s;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: inherit;
+  margin-top: 0.4rem;
+}
+
+.footer-content a:hover {
+  color: white;
+  transform: scale(1.04);
+}
+
+.link-list {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.list-info a {
+  margin-left: 1rem;
+}
+
+img.for-pict {
+  position: relative;
+  top: 0.7rem;
+}
+
+.info-block span {
+  margin-left: 1rem;
+}
+
+.social-networks {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 1.5rem;
+  justify-content: flex-start;
+}
+
+.network {
+  cursor: pointer;
+  margin-right: 2rem;
+  transition: 0.3s;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.network:hover {
+  transform: scale(1.2);
+}
+
+.network img {
+  width: 25px;
+}
+
+@media (min-width: 769px) and (max-width: 1000px) {
+  .footer-content-block {
+    margin-left: 4rem;
+    margin-right: 2rem;
+    grid-template-areas:
+      "about-us quick-links"
+      "shop     contact-us";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 300px;
+    column-gap: 4rem;
+    margin-bottom: 2rem;
+  }
+  .about-us {
+    max-width: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .footer-content-block {
+    margin-left: 4rem;
+    margin-right: 2rem;
+    grid-template-areas:
+      "about-us"
+      "quick-links"
+      "shop"
+      "contact-us";
+    grid-template-rows: repeat(1fr, 4);
+    grid-template-columns: 1fr;
+    column-gap: 4rem;
+    margin-bottom: 2rem;
+  }
+  .about-us {
+    max-width: none;
+  }
+}

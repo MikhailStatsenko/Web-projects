@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300;1,400&display=swap");
+
+body {
+  display: grid;
+  height: 97vh;
+  margin-left: 2%;
+  margin-right: 1.5%;
+  margin-top: 1%;
+  background-color: rgb(254, 238, 230);
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+header,
+nav,
+.sidebar,
+.ads,
+main,
+footer {
+  border: 3px solid rgba(227, 62, 62, 0.908);
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.ads {
+  grid-area: ads;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+@media (min-width: 1001px) {
+  body {
+    grid-template-areas:
+      "header  header header"
+      "sidebar nav    ads"
+      "sidebar main   ads"
+      "footer  footer footer";
+    grid-template-rows: 55px 45px 1fr 55px;
+    grid-template-columns: 230px 1fr 200px;
+    grid-gap: 14px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1000px) {
+  body {
+    grid-template-areas:
+      "header  header"
+      "nav     nav"
+      "sidebar main"
+      "ads     footer";
+    grid-template-rows: 60px 50px 1fr 60px;
+    grid-template-columns: 150px 1fr;
+    grid-gap: 14px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  body {
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "sidebar"
+      "ads"
+      "footer";
+    grid-template-rows: 50px 50px 1fr 50px 50px 50px;
+    grid-template-columns: 1fr;
+    grid-gap: 14px;
+  }
+}
