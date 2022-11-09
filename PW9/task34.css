@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300;1,400&display=swap");
+
+body {
+  background: rgb(122, 122, 124);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.page-content {
+  margin-top: 60px;
+  margin-bottom: 100px;
+  height: 90rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+.content-block {
+  width: 40rem;
+  height: 25rem;
+  font-size: 22px;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  padding-left: 3.5rem;
+  padding-right: 2.5rem;
+  border-radius: 1rem;
+  background: white;
+
+  display: grid;
+  grid-template-areas:
+    "content"
+    "buttons";
+  grid-template-rows: 1fr 65px;
+  grid-template-columns: 1fr;
+  border: 2px solid black;
+}
+
+.content-block .content {
+  grid-area: "content";
+}
+
+.content-block .buttons {
+  height: 40px;
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  grid-area: "buttons";
+}
+
+.content-block .buttons::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block;
+  position: relative;
+  background: rgb(40, 38, 38);
+  top: -10px;
+}
+
+.content-block .buttons button {
+  transition: backgroundr 0.2s ease;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  border: none;
+  width: 85px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 20px;
+  background: rgb(229, 229, 229);
+}
+
+.content-block .buttons button i {
+  transition: 0.2s ease;
+  font-size: 22px;
+  padding: 4px;
+  color: rgb(104, 104, 104);
+}
