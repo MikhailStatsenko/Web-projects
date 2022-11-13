@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300;1,400&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(166, 171, 202);
+  height: 85vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "captcha"
+    "input-block";
+  grid-template-rows: 4rem 5rem 1fr;
+  grid-template-columns: 1fr;
+  width: 17rem;
+  height: 20rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background: rgb(255, 254, 254);
+  border: 2px solid rgb(107, 104, 104);
+  box-shadow: 2.5px 2px rgb(101, 99, 99);
+  border-radius: 2rem;
+}
+
+.form h3 {
+  margin-top: 1.7rem;
+  text-align: center;
+  grid-area: "header";
+}
+
+.form p {
+  border: 1px solid black;
+  grid-area: "captcha";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(245, 245, 245);
+  border: 1px solid rgb(152, 152, 152);
+  font-size: 22px;
+  border-radius: 2px;
+}
+
+.form .input-block {
+  grid-area: "input-block";
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 2rem;
+}
+
+.form .input-block input {
+  outline: none;
+  height: 3rem;
+  margin-bottom: 1rem;
+  font-size: 18px;
+  padding: 0.3rem;
+  padding-left: 0.5rem;
+  border: 1px solid rgb(152, 152, 152);
+}
+
+.form .input-block button {
+  margin-top: 5px;
+  height: calc((100%-5rem) / 2);
+  border: 1px solid rgb(152, 152, 152);
+  background: rgb(242, 242, 242);
+}
+
+.form .input-block button:active {
+  background: rgb(225, 225, 225);
+}

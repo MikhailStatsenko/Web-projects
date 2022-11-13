@@ -7,7 +7,6 @@ const btn = document.querySelector(".button.button");
 btn.onclick = function () {
   if (btn.style.background == "rgb(229, 229, 229)") {
     btn.style.background = "rgb(255, 213, 213)";
-    btn.backgroundColor = "red";
     i.style.color = "rgb(255, 83, 83)";
   } else {
     btn.style.background = "rgb(229, 229, 229)";

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задание 2</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://f-gl.ru/images/flag/Mongolia/FlagMongolia1940-1992.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="task2.css" />
+  </head>
+  <header>
+    <nav class="menu-block">
+      <div class="menu">
+        <div class="menu-elem"></div>
+        <div class="menu-elem"></div>
+        <div class="menu-elem"></div>
+        <div class="menu-elem"></div>
+        <div class="menu-elem"></div>
+      </div>
+      <div class="cart">
+        <i class="fa fa-shopping-cart flag-true" id="cart"></i>
+        <div class="in-cart-block" id="cartBlock">
+          <ul class="in-cart">
+            <!-- <li class="in-cart-element">
+              <p>Апельсин: <span>5шт</span></p>
+              <div class="manip-btns">
+                <button>+</button>
+                <button>-</button>
+              </div>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <body>
+    <div class="goods">
+      <div class="product">
+        <div class="content">
+          <img src="https://cdn-icons-png.flaticon.com/512/1728/1728765.png" />
+          <h3>Апельсин</h3>
+          <div class="input-block">
+            <p>Количество:</p>
+            <div class="amount">
+              <input id="Апельсин" placeholder="0" />
+              <button onclick="addItemToCart('Апельсин')">
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="content">
+          <img src="https://cdn-icons-png.flaticon.com/512/415/415682.png" />
+          <h3>Яблоко</h3>
+          <div class="input-block">
+            <p>Количество:</p>
+            <div class="amount">
+              <input id="Яблоко" placeholder="0" />
+              <button onclick="addItemToCart('Яблоко')">
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="content">
+          <img src="https://cdn-icons-png.flaticon.com/512/3137/3137068.png" />
+          <h3>Банан</h3>
+          <div class="input-block">
+            <p>Количество:</p>
+            <div class="amount">
+              <input id="Банан" placeholder="0" />
+              <button onclick="addItemToCart('Банан')">
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="content">
+          <img src="https://cdn-icons-png.flaticon.com/512/3137/3137034.png" />
+          <h3>Лимон</h3>
+          <div class="input-block">
+            <p>Количество:</p>
+            <div class="amount">
+              <input id="Лимон" placeholder="0" />
+              <button onclick="addItemToCart('Лимон')">
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="content">
+          <img src="https://cdn-icons-png.flaticon.com/512/415/415716.png" />
+          <h3>Груша</h3>
+          <div class="input-block">
+            <p>Количество:</p>
+            <div class="amount">
+              <input id="Груша" placeholder="0" />
+              <button onclick="addItemToCart('Груша')">
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="content">
+          <img src="https://cdn-icons-png.flaticon.com/512/4480/4480823.png" />
+          <h3>Дыня</h3>
+          <div class="input-block">
+            <p>Количество:</p>
+            <div class="amount">
+              <input id="Дыня" placeholder="0" />
+              <button onclick="addItemToCart('Дыня')">
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="content">
+          <img src="https://cdn-icons-png.flaticon.com/512/6866/6866556.png" />
+          <h3>Гранат</h3>
+          <div class="input-block">
+            <p>Количество:</p>
+            <div class="amount">
+              <input id="Гранат" placeholder="0" />
+              <button onclick="addItemToCart('Гранат')">
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="content">
+          <img src="https://cdn-icons-png.flaticon.com/512/590/590685.png" />
+          <h3>Клубника</h3>
+          <div class="input-block">
+            <p>Количество:</p>
+            <div class="amount">
+              <input id="Клубника" placeholder="0" />
+              <button onclick="addItemToCart('Клубника')">
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="content">
+          <img src="https://cdn-icons-png.flaticon.com/512/1791/1791356.png" />
+          <h3>Вишня</h3>
+          <div class="input-block">
+            <p>Количество:</p>
+            <div class="amount">
+              <input id="Вишня" placeholder="0" />
+              <button onclick="addItemToCart('Вишня')">
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="task2.js"></script>
+  </body>
+</html>

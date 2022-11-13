@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300;1,400&display=swap");
+
+body {
+  margin-left: 17rem;
+  margin-right: 15rem;
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(230, 220, 165);
+}
+
+.menu-block {
+  height: 4.8rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid rgb(150, 150, 150);
+  z-index: 1000;
+  background: rgb(223, 212, 174);
+  display: grid;
+  grid-template-areas: "menu chart";
+  grid-template-rows: 1fr;
+  grid-template-columns: 4fr 15rem;
+}
+
+.menu-block .menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 4.5rem;
+  margin-left: 9rem;
+  grid-area: "menu";
+}
+
+.menu-block .menu .menu-elem {
+  border-left: 1px solid rgb(150, 150, 150);
+  width: 100%;
+  height: 3rem;
+}
+
+.menu-block .cart {
+  width: 15rem;
+  height: 4.5rem;
+  grid-area: "chart";
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 32px;
+}
+
+.menu-block .cart i {
+  transition: margin 0.65s ease, background 0.15s ease;
+  background: rgb(239, 239, 239);
+  padding: 0.7rem;
+  padding-right: 0.88rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+  border: 1px solid rgb(150, 150, 150);
+  z-index: 100;
+  color: rgb(68, 68, 68);
+}
+
+.in-cart-block {
+  opacity: 0;
+  transition: 0.2s;
+  border: 1px solid rgb(150, 150, 150);
+  width: 15rem;
+  min-height: 1rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.8rem;
+  background: rgb(239, 239, 239);
+  border-radius: 1rem;
+  padding: 1rem;
+  padding-top: 2.5rem;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.in-cart-block .in-cart {
+  overflow: scroll;
+  padding-left: 0;
+  max-height: 13.5rem;
+  font-size: 16px;
+}
+
+.in-cart .in-cart-element {
+  display: grid;
+  grid-template-areas: "name btns";
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 5rem;
+  align-items: center;
+  height: 3rem;
+}
+
+.in-cart .in-cart-element p {
+  grid-area: "name";
+}
+
+.in-cart-element .manip-btns {
+  grid-area: "btns";
+  font-size: 10px;
+  margin-left: 1rem;
+}
+
+.in-cart-element .manip-btns button {
+  background: rgb(228, 228, 228);
+  color: rgb(150, 150, 150);
+  border: 0.5px solid rgb(150, 150, 150);
+  height: 23px;
+  width: 25px;
+  cursor: pointer;
+}
+
+.in-cart-element .manip-btns button:active {
+  background: rgb(211, 211, 211);
+}
+
+.goods {
+  position: relative;
+  margin-top: 6rem;
+  width: 100%;
+  height: 57rem;
+  display: grid;
+  padding: 1rem;
+  justify-content: center;
+  gap: 1.5rem;
+  grid-template-areas:
+    "product product product"
+    "product product product"
+    "product product product";
+  grid-template-columns: repeat(1fr, 3);
+  grid-template-rows: repeat(1fr, 3);
+}
+
+.product {
+  width: 18rem;
+  height: 18rem;
+  border: 2px solid rgb(205, 205, 205);
+  transition: transform 0.35s ease, box-shadow 0.32s;
+  background: white;
+  border-radius: 20px;
+}
+
+.product:hover {
+  transform: scale(1.02);
+  box-shadow: 1px 1px rgb(205, 205, 205);
+}
+
+.product .content {
+  padding: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.product img {
+  height: 7rem;
+}
+
+.product .input-block {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.product .input-block p {
+  margin-right: 1rem;
+  color: rgb(150, 150, 150);
+}
+
+.product .input-block button {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: rgb(238, 238, 238);
+  border-radius: 0 4px 4px 0;
+  color: rgb(150, 150, 150);
+  cursor: pointer;
+}
+
+.product .input-block button:active {
+  background: rgb(227, 227, 227);
+}
+
+.product .input-block input {
+  text-align: right;
+  height: 1.63rem;
+  width: 3rem;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.product .input-block .amount {
+  border: 1px solid rgb(150, 150, 150);
+  border-radius: 5px;
+}
