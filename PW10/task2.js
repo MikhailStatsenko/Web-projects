@@ -58,7 +58,6 @@ function addItemToCart(name) {
 function addToValue(name, num) {
   let itemInsideCart = findItem(name);
   itemInsideCart.read(num);
-  // itemInsideCart.value = Number(itemInsideCart.value) + Number(num);
   purchaseAmount = document.querySelector(
     `.cart .in-cart-block .in-cart .in-cart-element p span.${name}`
   );

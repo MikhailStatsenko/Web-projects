@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300;1,400&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(238, 255, 154);
+  height: 97vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block {
+  display: grid;
+  grid-template-areas:
+    "output output output"
+    "shift index1 index2"
+    "shift swap swap";
+  grid-template-columns: 17rem 16.5rem 16.5rem;
+  grid-template-rows: 8fr 1fr 1fr;
+  grid-auto-flow: column;
+  height: 30rem;
+  width: 50rem;
+  background: rgb(195, 252, 247);
+  border: 1px solid black;
+}
+
+.output {
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50rem;
+  height: 20rem;
+}
+
+button {
+  border-radius: none;
+  font-size: 18px;
+  background: rgb(159, 178, 255);
+  border: 1px solid gray;
+}
+
+button:active {
+  background: rgb(135, 154, 230);
+}
+
+input {
+  border-radius: 0px;
+  border: 1px solid gray;
+  font-size: 20px;
+  outline: none;
+}
+
+.index1 {
+  grid-area: index1;
+}
+
+.index2 {
+  grid-area: index2;
+}
+
+.shift {
+  grid-area: shift;
+}
+
+.swap {
+  grid-area: swap;
+}
