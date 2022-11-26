@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(270deg);
+  }
+}
+
+body {
+  margin: 0;
+  background-color: rgb(252, 255, 230);
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  font-family: "Mulish", sans-serif;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gears img:nth-child(1) {
+  animation: 3.5s infinite alternate ease-in-out spin;
+  position: fixed;
+  top: -70px;
+  left: -70px;
+  width: 300px;
+}
+
+.gears img:nth-child(2) {
+  animation: 4.2s infinite alternate ease-in-out spin;
+  position: fixed;
+  bottom: -80px;
+  right: -80px;
+  width: 350px;
+}
+
+.info-block {
+  padding: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 15rem;
+  max-width: 70%;
+  border: 1px solid rgb(38, 104, 40);
+  background-color: rgba(72, 197, 76, 0.942);
+  border-radius: 20px;
+  z-index: 1000;
+}
+
+.info-block a {
+  transition: 0.3s;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 18px;
+  display: flex;
+}
+
+.info-block h1 {
+  text-align: center;
+}
+
+.info-block a:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 1240px) {
+  .gears img:nth-child(1) {
+    top: -22px;
+    left: -22px;
+    width: 100px;
+  }
+
+  .gears img:nth-child(2) {
+    bottom: -28px;
+    right: -28px;
+    width: 120px;
+  }
+}
