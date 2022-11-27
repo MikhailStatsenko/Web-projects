@@ -1,0 +1,24 @@
+main {
+  height: 75vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+article {
+  font-size: 19px;
+  text-align: justify;
+  width: 600px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    width: 95%;
+    text-align: left;
+  }
+  article {
+    font-size: 18px;
+    width: 95%;
+  }
+}

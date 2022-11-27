@@ -1,0 +1,63 @@
+.introduction,
+.conclusion,
+.article-content p {
+  font-size: 19px;
+  text-align: justify;
+}
+
+h2 {
+  margin-top: 1.2em;
+}
+
+.article-content img {
+  height: 250px;
+  border-radius: 20px;
+  border: 2px solid rgb(40, 31, 31);
+}
+
+.float-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.float-right {
+  float: right;
+  margin-left: 20px;
+}
+
+.conclusion h2 {
+  text-align: center;
+}
+
+.conclusion {
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+  .introduction,
+  .conclusion,
+  .article-content p {
+    font-size: 21px;
+    text-align: justify;
+  }
+
+  .float-left {
+    float: none;
+    margin-right: 0;
+  }
+
+  .float-right {
+    float: none;
+    margin-left: 0;
+  }
+
+  .article-content img {
+    text-align: center;
+    height: auto;
+    width: 98%;
+  }
+
+  .conclusion {
+    margin-bottom: 2rem;
+  }
+}

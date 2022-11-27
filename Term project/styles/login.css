@@ -21,7 +21,7 @@ footer {
 }
 
 .floating-image img {
-  animation: float 25s linear infinite;
+  animation: float 20s linear infinite;
   top: 40vh;
   left: 0;
 }
@@ -30,10 +30,10 @@ footer {
   0% {
     transform: translate(0, 0);
   }
-  50% {
+  70% {
     transform: translate(110vw, -45vh) rotate(180deg);
   }
-  70% {
+  75% {
     transform: translate(110vw, 70vh) rotate(270deg);
   }
   99.7% {
@@ -111,12 +111,18 @@ footer {
 }
 
 .form .input-box input[type="submit"] {
-  background: rgb(249, 240, 225);
+  transition: 0.15s;
+  background: rgb(72, 197, 76);
   color: rgba(0, 0, 0, 0.7);
   width: 7rem;
   cursor: pointer;
   margin-bottom: 20px;
   font-weight: 600;
+  border: none;
+}
+
+.form .input-box input[type="submit"]:hover {
+  background: rgb(78, 212, 83);
 }
 
 .forget {

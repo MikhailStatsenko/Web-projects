@@ -2,6 +2,8 @@ let menu = document.querySelector(".menu-wrapper .menu");
 let button = document.querySelector(".menu-btn");
 let lines = document.querySelectorAll(".menu-btn span");
 
+menu.style.transform = "translateX(-100%)";
+
 button.onclick = function () {
   if (menu.style.transform == "translateX(-100%)") {
     menu.style.transform = "translateX(0)";
