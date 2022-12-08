@@ -1,9 +1,10 @@
 thumbler.onmousedown = function (event) {
+  event.preventDefault();
   let cordX = event.clientX - thumbler.getBoundingClientRect().left;
 
-  document.addEventListener("mousemove", moveMouse);
+  document.addEventListener("mousemove", onMouseMove);
   document.addEventListener("mouseup", onMouseUp);
-  function moveMouse(event) {
+  function onMouseMove(event) {
     let changedLeft =
       event.clientX - cordX - slider.getBoundingClientRect().left;
     let borderRight = slider.offsetWidth - thumbler.offsetWidth;
@@ -12,6 +13,7 @@ thumbler.onmousedown = function (event) {
     thumbler.style.left = changedLeft + "px";
   }
   function onMouseUp() {
+    document.removeEventListener("mouseup", onMouseUp);
     document.removeEventListener("mousemove", onMouseMove);
   }
 };
