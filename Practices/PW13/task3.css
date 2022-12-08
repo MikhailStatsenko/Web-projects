@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+  font-size: 18px;
+}
+
+.selection-list {
+  background-color: rgb(245, 245, 245);
+  padding: 20px;
+}
+
+p {
+  font-size: 19px;
+  margin: 0;
+  margin-bottom: 5px;
+  border-bottom: 1px solid black;
+}
+
+#items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 12px;
+}
+
+#items li {
+  cursor: pointer;
+}
+
+.selected {
+  border-radius: 2px;
+  background: rgba(127, 205, 244, 0.366);
+  outline: 1px solid rgba(0, 0, 255, 0.325);
+}

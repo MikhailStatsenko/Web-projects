@@ -1,0 +1,37 @@
+body {
+  height: 97vh;
+}
+
+.droppable {
+  width: 430px;
+}
+
+.draggable {
+  position: absolute;
+}
+
+img.draggable {
+  width: 80px;
+}
+
+#container .draggable:nth-child(1) {
+  top: 40px;
+}
+
+#container .draggable:nth-child(2) {
+  top: 120px;
+}
+#container .draggable:nth-child(3) {
+  top: 240px;
+}
+
+#container .draggable:nth-child(4) {
+  top: 350px;
+}
+
+.cost {
+  position: fixed;
+  bottom: 10px;
+  left: 15px;
+  font-size: 24px;
+}

@@ -16,7 +16,7 @@ function showNotification(options) {
 
   setTimeout(function () {
     div.remove();
-  }, 5000);
+  }, 4000);
 }
 
 var block = document.querySelector(".notification-section");
